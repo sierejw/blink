@@ -7,7 +7,7 @@ MEMORY {
 _estack = ORIGIN(sram) + LENGTH(sram); /* stack points to end of SRAM*/
 
 SECTIONS {
-    .vectors : { KEEP(*(.vectors)) } > flash
+    .vectors : { KEEP(*(.isr_vector)) } > flash
     .text    : { *(.text*) }         > flash
     .rodata  : { *(.rodata*) }       > flash
     
