@@ -1,4 +1,9 @@
 *.o
 *.elf
 *.elf.
+*.elf.*
 *.bin
+/cmsis_core/
+/cmsis_f4/
+/.cache/
+compile_commands.json
