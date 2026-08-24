@@ -11,7 +11,7 @@ void SystemInit(void) {
     RCC->CR |= BIT(24);
     while ((RCC->CR & BIT(25)) == 0) spin(1);
     RCC->CFGR = (APB1_PRE << 10) | (APB2_PRE << 13);
-    RCC->CR |= 2;
+    RCC->CFGR |= 2;
     while ((RCC->CFGR & 12) == 0) spin(1);
 
     RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
